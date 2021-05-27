@@ -1,0 +1,37 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-05-25T14:52:04.494Z",
+        "line": 2,
+        "name": "Contactez-nous link redirectionerror",
+        "description": "",
+        "id": "apec-bugs;contactez-nous-link-redirectionerror",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\n\tat com.apec.utils.BaseClass.navigateToHomePage(BaseClass.java:60)\n\tat com.apec.stepDefinitions.Bug621Stepdefs.userIsOnApecHomePage(Bug621Stepdefs.java:9)\n\tat ✽.User is on Apec home page(file:///Users/dylanIsrael/IdeaProjects/cucumber/ApecTestAutomation/src/test/resources/features/Apec.feature:3)\n",
+              "duration": 15000000,
+              "status": "failed"
+            },
+            "line": 3,
+            "name": "User is on Apec home page",
+            "match": {
+              "location": "com.apec.stepDefinitions.Bug621Stepdefs.userIsOnApecHomePage()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      }
+    ],
+    "name": "Apec Bugs",
+    "description": "",
+    "id": "apec-bugs",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/Apec.feature",
+    "tags": []
+  }
+]
