@@ -22,8 +22,8 @@ Scenario Outline: Bug 620 Appointment center not stored in memory
   And User entered <postalcode>
   When User click on Centre apec grenoble in results
   And User clicked on Prenez rendez-vous
-  Then Appointment center should be stored in memory
-  And User logout from Apec
+ Then Appointment center should be stored in memory
+#  And User logout from Apec
   Examples:
     | email                |      password |postalcode|
     |yoanntagne45@gmail.com|1995P@oyonyoann|     38000     |

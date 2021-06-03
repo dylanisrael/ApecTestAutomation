@@ -12,15 +12,9 @@ import org.testng.annotations.DataProvider;
                 "json:target/cucumber-reports/cucumber.json"
         },
         features = {"src/test/resources/features"},
-        glue = {"com.apec.stepDefinitions"},
-        monochrome = true
+        glue = {"com.apec.stepDefinitions"}
 )
 
 public class ParallelRun extends AbstractTestNGCucumberTests{
 
-    @Override
-    @DataProvider(parallel = true)
-    public Object[][] scenarios() {
-        return super.scenarios();
-    }
 }

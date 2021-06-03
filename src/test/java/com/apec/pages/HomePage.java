@@ -75,9 +75,14 @@ public class HomePage extends BaseClass {
         passwordField.sendKeys(password);
         attente(2);
         connexionButton.click();
+        attente(3);
     }
     public static void logoutFromApec() throws IOException{
+        try{
         deconnexionButton.click();
+    }catch (Exception e){
+        System.out.println("Le script n'a pas pu deconnecter le compte");
+    }
     }
 
     public static void clickOnMonCentre() throws IOException{

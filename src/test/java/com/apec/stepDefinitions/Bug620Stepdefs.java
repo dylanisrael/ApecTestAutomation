@@ -30,15 +30,10 @@ public class Bug620Stepdefs extends BaseClass {
     }
     @When("User click on Centre apec grenoble in results")
     public void userClickOnCentreApecGrenobleInResults() throws InterruptedException {
-        attente(1);
+        attente(4);
     MonCentrePage.chooseGrenoble();
-    try{
-        if (MonCentrePage.checkSpinner()){
-            System.out.println("spinner present");
-        }
-    }catch(Exception e){
-        System.out.println(e.getMessage());
-        }
+    attente(2);
+    MonCentrePage.handleSpinner();
 
 
     }
@@ -46,23 +41,20 @@ public class Bug620Stepdefs extends BaseClass {
     public void userClickedOnPrenezRendezVous() throws InterruptedException {
         attente(1);
         MonCentrePage.clickOnPrenezRendezVousButton();
-        attente(1);
+        attente(5);
 
     }
     @Then("Appointment center should be stored in memory")
-    public void appointmentCenterShouldBeStoredInMemory() throws InterruptedException {
+    public void appointmentCenterShouldBeStoredInMemory() throws InterruptedException, IOException {
         attente(1);
-    System.out.println(MonCentrePage.selectBox.getText());
+    System.out.println("le rendez vous est cale par defaut pour : "+ MonCentrePage.centre.getText());
+    MonCentrePage.verifictionBug620();
+    attente(10);
     }
     @And("User logout from Apec")
     public void userLogoutFromApec() throws IOException, InterruptedException {
-        try{
             HomePage.logoutFromApec();
-        }catch (Exception e){
-            System.out.println(e.getMessage());
-        }
-
-        attente(10);
+            attente(10);
     }
 
 

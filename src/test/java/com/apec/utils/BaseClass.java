@@ -24,6 +24,7 @@ public class BaseClass {
     static NgWebDriver NgWebDriver;
     static  JavascriptExecutor jsDriver;
 
+
     public static LocalDate date;
     public static LocalTime tps;
     public static String value_tps = getTime();
@@ -49,7 +50,7 @@ public class BaseClass {
         //capabilities.setCapability(ChromeOptions.CAPABILITY, options);
         options.addArguments("--disable-blink-features=AutomationControlled");
         options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
-        options.setExperimentalOption("useAutomationExtension", false);
+//      options.setExperimentalOption("useAutomationExtension", false);
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 

@@ -3,26 +3,144 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-05-25T14:52:04.494Z",
-        "line": 2,
-        "name": "Contactez-nous link redirectionerror",
+        "line": 3,
+        "name": "go to apec home page",
         "description": "",
-        "id": "apec-bugs;contactez-nous-link-redirectionerror",
-        "type": "scenario",
-        "keyword": "Scenario",
+        "type": "background",
+        "keyword": "Background",
         "steps": [
           {
             "result": {
-              "error_message": "java.lang.NullPointerException\n\tat com.apec.utils.BaseClass.navigateToHomePage(BaseClass.java:60)\n\tat com.apec.stepDefinitions.Bug621Stepdefs.userIsOnApecHomePage(Bug621Stepdefs.java:9)\n\tat ✽.User is on Apec home page(file:///Users/dylanIsrael/IdeaProjects/cucumber/ApecTestAutomation/src/test/resources/features/Apec.feature:3)\n",
-              "duration": 15000000,
-              "status": "failed"
+              "duration": 7417000000,
+              "status": "passed"
             },
-            "line": 3,
+            "line": 4,
             "name": "User is on Apec home page",
             "match": {
               "location": "com.apec.stepDefinitions.Bug621Stepdefs.userIsOnApecHomePage()"
             },
             "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-06-01T16:50:45.648Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3876000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.apec.stepDefinitions.CucumberHooks.setup()"
+            }
+          }
+        ],
+        "line": 29,
+        "name": "Bug 620 Appointment center not stored in memory",
+        "description": "",
+        "id": "apec-bugs;bug-620-appointment-center-not-stored-in-memory;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 9233000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.apec.stepDefinitions.CucumberHooks.teardown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 9478000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "login to Apec with yoanntagne45@gmail.com and 1995P@oyonyoann",
+            "match": {
+              "arguments": [
+                {
+                  "val": "yoanntagne45@gmail.com",
+                  "offset": 19
+                },
+                {
+                  "val": "1995P@oyonyoann",
+                  "offset": 46
+                }
+              ],
+              "location": "com.apec.stepDefinitions.Bug620Stepdefs.loginToApecWithEmailAndPassword(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5173000000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "User clicked on mon centre",
+            "match": {
+              "location": "com.apec.stepDefinitions.Bug620Stepdefs.userClickedOnMonCentre()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2137000000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "User entered 38000",
+            "match": {
+              "arguments": [
+                {
+                  "val": "38000",
+                  "offset": 13
+                }
+              ],
+              "location": "com.apec.stepDefinitions.Bug620Stepdefs.userEnteredPostalcode(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 16200000000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "User click on Centre apec grenoble in results",
+            "match": {
+              "location": "com.apec.stepDefinitions.Bug620Stepdefs.userClickOnCentreApecGrenobleInResults()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6079000000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "User clicked on Prenez rendez-vous",
+            "match": {
+              "location": "com.apec.stepDefinitions.Bug620Stepdefs.userClickedOnPrenezRendezVous()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 15730000000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "Appointment center should be stored in memory",
+            "match": {
+              "location": "com.apec.stepDefinitions.Bug620Stepdefs.appointmentCenterShouldBeStoredInMemory()"
+            },
+            "keyword": "Then "
           }
         ]
       }

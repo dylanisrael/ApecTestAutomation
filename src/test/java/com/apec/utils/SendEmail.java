@@ -18,9 +18,13 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class SendEmail extends BaseClass{
-    public static String filePath = (System.getProperty("user.dir")+"/src/main/resources");
+    public static String filePath = (System.getProperty("user.dir")+"/src/test/resources/reports");
+
+    public static String Path = filePath+"/Verification.xlsx";
 
     public static void sendEmail(String fromEmail, String FromEmailPassword, String toEmail){
+
+        String mailContent ="\"Bonjour, \\n  Ci-joint le fichier correspondant aux Retests sur le site www.apec.fr\"";
         // Receiver's email ID
         String receiver = toEmail; //"martinkuate9@gmail.com";
 
@@ -64,12 +68,12 @@ public class SendEmail extends BaseClass{
 
             // add the body message
             BodyPart bodyPart = new MimeBodyPart();
-            bodyPart.setText("Bonjour, \n  Ci-joint le fichier correspondant aux Retests sur le site www.leetchi.com");
+            bodyPart.setText(mailContent);
             multipart.addBodyPart(bodyPart);
 
             // attach the file
             MimeBodyPart mimeBodyPart = new MimeBodyPart();
-            mimeBodyPart.attachFile(new File(path));
+            mimeBodyPart.attachFile(new File(Path));
 
             multipart.addBodyPart(mimeBodyPart);
             message.setContent(multipart);
@@ -86,16 +90,16 @@ public class SendEmail extends BaseClass{
         //Create an object of File class to open xlsx file
 
         String os = System.getProperty("os.name");
-        File file;
+        File fileToSend;
         if(os.startsWith("W")){
-            file =    new File(filePath+"\\"+fileName);
+            fileToSend =    new File(filePath+"\\"+fileName);
         }else {
-            file =    new File(filePath+"/"+fileName);
+            fileToSend =    new File(filePath+"/"+fileName);
         }
 
         //Create an object of FileInputStream class to read excel file
 
-        FileInputStream inputStream = new FileInputStream(file);
+        FileInputStream inputStream = new FileInputStream(fileToSend);
 
         Workbook guru99Workbook = null;
 
@@ -138,7 +142,6 @@ public class SendEmail extends BaseClass{
 
                 } //browse columns
             }
-
         }
 
         inputStream.close();
@@ -147,8 +150,8 @@ public class SendEmail extends BaseClass{
     }
 
     public static void sendEmailTo(String destination) throws IOException {
-        System.out.println(SendEmail.mailParametersCheck("reports/Verification.xlsx","Data"));
-        if(SendEmail.mailParametersCheck("reports/Verification.xlsx","Data")>=3){
+        System.out.println(SendEmail.mailParametersCheck("Verification.xlsx","Data"));
+        if(SendEmail.mailParametersCheck("Verification.xlsx","Data")>=3){
             SendEmail.sendEmail("martin.kuatepk67@gmail.com", "Zenity@2021", destination);
             System.out.println(" ");
         }
