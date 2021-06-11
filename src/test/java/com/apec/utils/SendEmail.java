@@ -22,9 +22,9 @@ public class SendEmail extends BaseClass{
 
     public static String Path = filePath+"/Verification.xlsx";
 
-    public static void sendEmail(String fromEmail, String FromEmailPassword, String toEmail){
+    public static void sendEmail(String fromEmail, String FromEmailPassword, String toEmail,String siteTeste){
 
-        String mailContent ="\"Bonjour, \\n  Ci-joint le fichier correspondant aux Retests sur le site www.apec.fr\"";
+        String mailContent ="Bonjour, Ci-joint le fichier correspondant aux Retests sur le site " + siteTeste+"";
         // Receiver's email ID
         String receiver = toEmail; //"martinkuate9@gmail.com";
 
@@ -45,7 +45,7 @@ public class SendEmail extends BaseClass{
         properties.put("mail.smtp.port", port);
 
         // Create session object passing properties and authenticator instance
-        Session session = Session.getInstance(properties, new javax.mail.Authenticator() {
+        Session session = Session.getInstance(properties, new Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication() {
                 return new PasswordAuthentication(fromEmail, FromEmailPassword);
             }
@@ -149,12 +149,8 @@ public class SendEmail extends BaseClass{
         return bugImplementNumber;
     }
 
-    public static void sendEmailTo(String destination) throws IOException {
-        System.out.println(SendEmail.mailParametersCheck("Verification.xlsx","Data"));
-        if(SendEmail.mailParametersCheck("Verification.xlsx","Data")>=3){
-            SendEmail.sendEmail("martin.kuatepk67@gmail.com", "Zenity@2021", destination);
-            System.out.println(" ");
-        }
+    public static void sendEmailTo(String destination, String siteTeste) throws IOException {
+            SendEmail.sendEmail("israeltestbox@gmail.com", "Qwerty0!", destination,siteTeste);
     }
 
 

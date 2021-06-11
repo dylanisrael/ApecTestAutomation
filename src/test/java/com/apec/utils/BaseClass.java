@@ -20,6 +20,8 @@ import java.util.concurrent.TimeUnit;
 
 public class BaseClass {
 
+    public static String siteTeste="Apec";
+
     public static WebDriver driver;
     static NgWebDriver NgWebDriver;
     static  JavascriptExecutor jsDriver;

@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 7417000000,
+              "duration": 12366000000,
               "status": "passed"
             },
             "line": 4,
@@ -24,11 +24,279 @@
         ]
       },
       {
-        "start_timestamp": "2021-06-01T16:50:45.648Z",
+        "start_timestamp": "2021-06-11T15:24:37.911Z",
         "before": [
           {
             "result": {
-              "duration": 3876000000,
+              "duration": 5378000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.apec.stepDefinitions.CucumberHooks.setup()"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "Bug 621 Contactez-nous link redirectionerror",
+        "description": "",
+        "id": "apec-bugs;bug-621-contactez-nous-link-redirectionerror",
+        "after": [
+          {
+            "result": {
+              "duration": 542000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.apec.stepDefinitions.CucumberHooks.teardown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 7661000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User clicked on site corporate link",
+            "match": {
+              "location": "com.apec.stepDefinitions.Bug621Stepdefs.userClickedOnSiteCorporateLink()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 73000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user clicked on contactez-nous link",
+            "match": {
+              "location": "com.apec.stepDefinitions.Bug621Stepdefs.userClickedOnContactezNousLink()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: expected [true] but found [false]\n\tat org.testng.Assert.fail(Assert.java:99)\n\tat org.testng.Assert.failNotEquals(Assert.java:1037)\n\tat org.testng.Assert.assertTrue(Assert.java:45)\n\tat org.testng.Assert.assertTrue(Assert.java:55)\n\tat com.apec.utils.BaseClass.checkCorrection(BaseClass.java:130)\n\tat com.apec.pages.CorporatePage.verificationBug621(CorporatePage.java:36)\n\tat com.apec.stepDefinitions.Bug621Stepdefs.userShouldBeOnContactPage(Bug621Stepdefs.java:36)\n\tat ✽.User should be on contact page(file:///Users/dylanIsrael/IdeaProjects/cucumber/ApecTestAutomation/src/test/resources/features/Apec.feature:9)\n",
+              "duration": 1081000000,
+              "status": "failed"
+            },
+            "line": 9,
+            "name": "User should be on contact page",
+            "match": {
+              "location": "com.apec.stepDefinitions.Bug621Stepdefs.userShouldBeOnContactPage()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "go to apec home page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 9099000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User is on Apec home page",
+            "match": {
+              "location": "com.apec.stepDefinitions.Bug621Stepdefs.userIsOnApecHomePage()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-06-11T15:25:05.157Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2960000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.apec.stepDefinitions.CucumberHooks.setup()"
+            }
+          }
+        ],
+        "line": 16,
+        "name": "Bug 604 button overlapping",
+        "description": "",
+        "id": "apec-bugs;bug-604-button-overlapping;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 412000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.apec.stepDefinitions.CucumberHooks.teardown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3225000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User set windows size with 768 and 1024",
+            "match": {
+              "arguments": [
+                {
+                  "val": "768",
+                  "offset": 27
+                },
+                {
+                  "val": "1024",
+                  "offset": 35
+                }
+              ],
+              "location": "com.apec.stepDefinitions.Bug604Stepdefs.userSetWindowsSizeWithWidthAndHeight(int,int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: expected [true] but found [false]\n\tat org.testng.Assert.fail(Assert.java:99)\n\tat org.testng.Assert.failNotEquals(Assert.java:1037)\n\tat org.testng.Assert.assertTrue(Assert.java:45)\n\tat org.testng.Assert.assertTrue(Assert.java:55)\n\tat com.apec.utils.BaseClass.checkCorrection(BaseClass.java:130)\n\tat com.apec.pages.HomePage.verifictionBug604(HomePage.java:68)\n\tat com.apec.stepDefinitions.Bug604Stepdefs.elementsAreOverlapping(Bug604Stepdefs.java:20)\n\tat ✽.Elements are overlapping(file:///Users/dylanIsrael/IdeaProjects/cucumber/ApecTestAutomation/src/test/resources/features/Apec.feature:13)\n",
+              "duration": 90000000,
+              "status": "failed"
+            },
+            "line": 13,
+            "name": "Elements are overlapping",
+            "match": {
+              "location": "com.apec.stepDefinitions.Bug604Stepdefs.elementsAreOverlapping()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "go to apec home page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 6268000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User is on Apec home page",
+            "match": {
+              "location": "com.apec.stepDefinitions.Bug621Stepdefs.userIsOnApecHomePage()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-06-11T15:25:20.962Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2050000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.apec.stepDefinitions.CucumberHooks.setup()"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "Bug 604 button overlapping",
+        "description": "",
+        "id": "apec-bugs;bug-604-button-overlapping;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 359000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.apec.stepDefinitions.CucumberHooks.teardown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3258000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User set windows size with 1620 and 2160",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1620",
+                  "offset": 27
+                },
+                {
+                  "val": "2160",
+                  "offset": 36
+                }
+              ],
+              "location": "com.apec.stepDefinitions.Bug604Stepdefs.userSetWindowsSizeWithWidthAndHeight(int,int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 96000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Elements are overlapping",
+            "match": {
+              "location": "com.apec.stepDefinitions.Bug604Stepdefs.elementsAreOverlapping()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "go to apec home page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 8846000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User is on Apec home page",
+            "match": {
+              "location": "com.apec.stepDefinitions.Bug621Stepdefs.userIsOnApecHomePage()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-06-11T15:25:33.007Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1899000000,
               "status": "passed"
             },
             "match": {
@@ -43,7 +311,7 @@
         "after": [
           {
             "result": {
-              "duration": 9233000000,
+              "duration": 10001000000,
               "status": "passed"
             },
             "match": {
@@ -56,7 +324,7 @@
         "steps": [
           {
             "result": {
-              "duration": 9478000000,
+              "duration": 9479000000,
               "status": "passed"
             },
             "line": 20,
@@ -78,7 +346,7 @@
           },
           {
             "result": {
-              "duration": 5173000000,
+              "duration": 5483000000,
               "status": "passed"
             },
             "line": 21,
@@ -90,7 +358,7 @@
           },
           {
             "result": {
-              "duration": 2137000000,
+              "duration": 2095000000,
               "status": "passed"
             },
             "line": 22,
@@ -108,7 +376,7 @@
           },
           {
             "result": {
-              "duration": 16200000000,
+              "duration": 16184000000,
               "status": "passed"
             },
             "line": 23,
@@ -120,7 +388,7 @@
           },
           {
             "result": {
-              "duration": 6079000000,
+              "duration": 6093000000,
               "status": "passed"
             },
             "line": 24,
@@ -132,7 +400,7 @@
           },
           {
             "result": {
-              "duration": 15730000000,
+              "duration": 42810000000,
               "status": "passed"
             },
             "line": 25,

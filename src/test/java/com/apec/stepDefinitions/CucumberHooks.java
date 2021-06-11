@@ -23,8 +23,7 @@ public class CucumberHooks extends BaseClass {
     public void teardown() throws IOException {
         closeDriver(driver);
         ExcelManager.formatResult("Verification.xlsx","Data");
-        SendEmail.sendEmailTo("fokourou@zenity.fr");
-        SendEmail.sendEmailTo("israel.mouofopk68@gmail.com");
+        SendEmail.sendEmailTo("fokourou@zenity.fr",siteTeste);
     }
 
 
