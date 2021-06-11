@@ -61,9 +61,11 @@ public class HomePage extends BaseClass {
        }
        else {
            bugStatus = "OK";
+           corrected = true;
            System.out.println("✅ "+bugStatus+" Les boutons ne se supperposent plus bug corrige");
        }
        writeResultInFile("604",bugStatus);
+       checkCorrection();
 
     }
 

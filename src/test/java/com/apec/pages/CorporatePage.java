@@ -22,6 +22,7 @@ public class CorporatePage extends BaseClass {
             String urlContactezNousCorporate = contactezNousLink.getAttribute("href");
             if(urlContactezNousCorporate.equals(HomePage.urlContactezNousHomePage)){
                 bugStatus ="OK";
+                corrected = true;
                 System.out.println("✅ "+bugStatus+" Le click sur contacter renvoi pas vers la page de contact bug corrige ");
             System.out.println("Lien de corporate"+urlContactezNousCorporate);
                 System.out.println("Lien de homepage"+HomePage.urlContactezNousHomePage);
@@ -32,6 +33,7 @@ public class CorporatePage extends BaseClass {
                 System.out.println("Lien de homepage "+HomePage.urlContactezNousHomePage);
             }
             writeResultInFile("621",bugStatus);
+            checkCorrection();
         }catch (Exception e){
             System.out.println("Le click sur contacter nous ne renvoi pas vers la page de contact bug non corrige ");
         }

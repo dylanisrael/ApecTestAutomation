@@ -23,8 +23,7 @@ public class BaseClass {
     public static WebDriver driver;
     static NgWebDriver NgWebDriver;
     static  JavascriptExecutor jsDriver;
-
-
+    public static boolean corrected = false;
     public static LocalDate date;
     public static LocalTime tps;
     public static String value_tps = getTime();
@@ -126,6 +125,9 @@ public class BaseClass {
     public static void setBrowserSize(int width,int height) {
         driver.manage().window().setPosition(new Point(0,0));
         driver.manage().window().setSize(new Dimension(width, height));
+    }
+    public static void checkCorrection(){
+        Assert.assertTrue(corrected);
     }
 
 }

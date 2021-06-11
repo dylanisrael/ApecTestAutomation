@@ -82,12 +82,14 @@ public class MonCentrePage extends BaseClass {
     public static void verifictionBug620() throws IOException {
         if(centre.getText().contains("Grenoble")){
             bugStatus = "OK";
+            corrected = true;
             System.out.println("✅ "+bugStatus+" Le centre choisi est celui qui est pris en compte par defaut bug corrige");
         }else {
             bugStatus = "KO";
             System.out.println("❌ "+bugStatus+" Le centre choisi n'est toujours pas pris en compte par defaut bug non corrige");
         }
         writeResultInFile("620",bugStatus);
+        checkCorrection();
     }
 
 
